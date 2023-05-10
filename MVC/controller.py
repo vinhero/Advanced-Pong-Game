@@ -1,11 +1,11 @@
 import pygame
 from model import Model
-from view import View
+#from view import View
 
 
 class Controller:
-    def __init__(self, model) -> None:
-        self.model = model
+    def __init__(self):
+        self.model = Model()
         self.keys = set()
 
     def listenForInput(self):
@@ -19,3 +19,9 @@ class Controller:
 
             if pygame.K_DOWN in self.keys:
                 self.model.GameObjects.player1.moveDown()
+            
+            if pygame.K_w in self.keys:
+                self.model.GameObjects.player2.moveUp()
+            
+            if pygame.K_s in self.keys:
+                self.model.GameObjects.player2.moveDown()

@@ -1,4 +1,7 @@
 import pygame
+from MVC.model import Model
+from MVC.view import View
+from MVC.controller import Controller
 
 
 def gameloop():
@@ -12,6 +15,10 @@ def gameloop():
     screen = pygame.display.set_mode((screen_width, screen_height))
     background_colour = pygame.Color(0, 0, 0)
     screen.fill(background_colour)
+
+    model = Model()
+    view = View()
+    controller = Controller()
 
     left = 20
     top = 20
@@ -53,6 +60,9 @@ def gameloop():
                 player1 = player1.move(0, 20)
             else:
                 print("would be out of area!")
+
+        if pygame.K_s in keys:
+            model.saveMatchResult()
 
 
 if __name__ == "__main__":

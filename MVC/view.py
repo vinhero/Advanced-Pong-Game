@@ -1,6 +1,5 @@
 import pygame
 
-
 class View:
     def __init__(self):
         self.width = 1000
