@@ -1,5 +1,5 @@
 import pygame
-from model import Model
+from MVC.model import Model
 #from view import View
 
 

@@ -1,12 +1,12 @@
 import pygame
 import sqlite3
-#from view import View
+from MVC.view import View
 #from ..GameObjects.Player import Player
 
 
 class Model:
     def __init__(self):
-        #self.view = View()
+        self.view = View()
         self.match = False
         self.GameObjects = dict()
 
@@ -21,11 +21,6 @@ class Model:
 
     def saveMatchResult(self):
         
-        def insert_data(name1, score1, name2, score2):
-            c.execute("INSERT INTO spieler_scores (player, score1, player, score2) VALUES (?, ?, ?, ?)",
-                    (name1, score1, name2, score2))
-            conn.commit()
-            print("Daten wurden erfolgreich in die Tabelle eingefügt!")
         
         conn = sqlite3.connect('spieler_scores.db')
 
@@ -38,6 +33,12 @@ class Model:
                     player2 TEXT,
                     score2 INTEGER)''')
 
-        insert_data("Spieler A", 10, "Spieler B", 20)
+        self.insert_data(conn, c, "Spieler A", 10, "Spieler B", 20)
 
         conn.close()
+    
+    def insert_data(self, conn, c, name1, score1, name2, score2):
+        c.execute("INSERT INTO spieler_scores (player1, score1, player2, score2) VALUES (?, ?, ?, ?)",
+                (name1, score1, name2, score2))
+        conn.commit()
+        print("Daten wurden erfolgreich in die Tabelle eingefügt!")
