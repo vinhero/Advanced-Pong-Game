@@ -1,5 +1,6 @@
 import pygame
 
+
 class View:
     def __init__(self):
         self.width = 1000
@@ -12,6 +13,11 @@ class View:
         self.screen.fill(self.background_colour)
 
         for game_object in game_objects:
-            game_object.update()
+            game_objects[game_object].update()
+            self.draw_object(game_objects[game_object])
 
-        self.screen.flip()
+        pygame.display.flip()
+
+    def draw_object(self, object):
+        pygame.draw.rect(surface=self.screen, rect=object.body,
+                         color=object.body_color)

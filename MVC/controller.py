@@ -1,7 +1,6 @@
 import pygame
 import sys
 from MVC.model import Model
-#from view import View
 
 
 class Controller:
@@ -29,13 +28,17 @@ class Controller:
     def execInput(self):
         for key in self.keys:
             if pygame.K_UP in self.keys:
-                self.model.GameObjects.player1.moveUp()
+                self.model.GameObjects["player1"].moveUp()
 
             if pygame.K_DOWN in self.keys:
-                self.model.GameObjects.player1.moveDown()
-            
+                self.model.GameObjects["player1"].moveDown()
+
             if pygame.K_w in self.keys:
-                self.model.GameObjects.player2.moveUp()
-            
+                self.model.GameObjects["player2"].moveUp()
+
             if pygame.K_s in self.keys:
-                self.model.GameObjects.player2.moveDown()
+                self.model.GameObjects["player2"].moveDown()
+
+            if pygame.K_0 in self.keys:
+                print("saving Match")
+                self.model.saveMatchResult()
