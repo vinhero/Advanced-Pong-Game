@@ -1,4 +1,5 @@
 import pygame
+import sys
 from MVC.model import Model
 #from view import View
 
