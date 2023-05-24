@@ -9,6 +9,19 @@ class Controller:
         self.keys = set()
 
     def listenForInput(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    sys.exit()
+                else:
+                    self.keys.add(event.key)
+            elif event.type == pygame.KEYUP:
+                self.keys.discard(event.key)
+
         if (len(self.keys) > 0):
             self.execInput()
 
