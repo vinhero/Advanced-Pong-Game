@@ -1,28 +1,37 @@
 {
-    "Player1": {
-        "Name": "Player1",
-        //"Color": "",
-        "StartPosX": 0,
-        "StartPosY": 0 
-    },
-
-    "Player2": {
-        "Name": "Player2",
-        //"Color": "",
-        "StartPosX": 0,
-        "StartPosY": 0 
-    },
+    "Players": 
+    {
+        "DefaultSpeed": 20,
+        "Player1": 
+        {
+            "Name": "Player1",
+            //"Color": "",
+            "StartPosX": 0,
+            "StartPosY": 0 
+        },
     
-    "Match": {
+        "Player2": 
+        {
+            "Name": "Player2",
+            //"Color": "",
+            "StartPosX": 0,
+            "StartPosY": 0 
+        }
+    },
+        
+    "Match": 
+    {
         "Winscore": 10
     },
 
-    "Screen": {
+    "Screen": 
+    {
       "ResX": 720,
       "ResY": 1280  
     },
 
-    "KeyBinds": {
+    "KeyBinds": 
+    {
         "Player1Up": "K_UP",
         "Player1Down": "K_DOWN",
         "Player2Up": "K_w",
