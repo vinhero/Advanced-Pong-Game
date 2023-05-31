@@ -1,0 +1,24 @@
+{
+    "Player1": {
+        "Name": "Player1",
+        //"Color": "",
+        "StartPosX": 0,
+        "StartPosY": 0 
+    },
+
+    "Player2": {
+        "Name": "Player2",
+        //"Color": "",
+        "StartPosX": 0,
+        "StartPosY": 0 
+    },
+    
+    "Match": {
+        "Winscore": 10
+    },
+
+    "Screen": {
+      "ResX": 720,
+      "ResY": 1280  
+    }
+}
