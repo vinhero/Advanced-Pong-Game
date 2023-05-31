@@ -20,5 +20,14 @@
     "Screen": {
       "ResX": 720,
       "ResY": 1280  
+    },
+
+    "KeyBinds": {
+        "Player1Up": "K_UP",
+        "Player1Down": "K_DOWN",
+        "Player2Up": "K_w",
+        "Player2Down": "K_s",
+        "Left": "K_LEFT",
+        "Right": "K_RIGHT"
     }
 }
