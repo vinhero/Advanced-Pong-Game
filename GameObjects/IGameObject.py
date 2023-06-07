@@ -3,7 +3,7 @@ class IGameObject:
         """ Initialize this GameObject. """
         pass
 
-    def update_actual(self) -> None:
+    def update_actualPos(self) -> None:
         """ Updating the actual position this GameObject. """
         pass
 
